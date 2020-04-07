@@ -1,3 +1,4 @@
 FROM dependabot/dependabot-core
-COPY . /home/dependabot/dependabot-script
+WORKDIR /home/dependabot/dependabot-script
+COPY . .
 RUN bundle install -j 3 --path vendor
